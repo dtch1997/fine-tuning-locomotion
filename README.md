@@ -20,6 +20,29 @@ Install dependencies:
 -   Install MPI: `sudo apt install libopenmpi-dev`
 -   Install requirements: `pip3 install -r requirements.txt`
 
+
+## Real deployment pre-requisite
+Download precompiled Unitree SDK library from official github repository: 
+```
+https://github.com/unitreerobotics/unitree_legged_sdk/blob/master/lib/libunitree_legged_sdk_amd64.so
+```
+
+Install .so file locally
+```
+sudo mv libunitree_legged_sdk_amd64.so /usr/lib
+```
+
+Then the PyBind extension can be installed like a Python package: 
+```
+pip install third-party/unitree_legged_sdk
+```
+
+Verify it works:
+```
+# Activate conda python
+>>> import robot_interface
+```
+
 ## Training Policies in Simulation
 
 To train a policy, run the following command:
