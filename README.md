@@ -39,7 +39,7 @@ pip install third-party/unitree_legged_sdk
 
 Verify it works:
 ```
-# Activate conda python
+# Activate python interpreter
 >>> import robot_interface
 ```
 
